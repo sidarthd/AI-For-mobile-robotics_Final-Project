@@ -1,0 +1,16 @@
+<launch> 
+
+	<node name="line_follower" type="line_follower.py" pkg="final" output="screen" >
+		<param name="plan_topic" type="string" value="/planner_node/final_car_plan"/>
+		<param name="pose_topic" type="string" value="/pf/viz/inferred_pose" />
+		<param name="plan_lookahead" type="int" value="5" />
+		<param name="translation_weight" type="double" value="1.0" />
+		<param name="rotation_weight" type="double" value="0.0" />
+		<param name="kp" type="double" value="0.9" />
+		<param name="ki" type="double" value="0.4" />
+		<param name="kd" type="double" value="0.2" />
+		<param name="error_buff_length" type="int" value="10" />
+		<param name="speed" type="double" value="0.9" />
+	</node>
+
+</launch>
